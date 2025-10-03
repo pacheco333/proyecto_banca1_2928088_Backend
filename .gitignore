@@ -1,0 +1,46 @@
+#Dependencias a ignorar
+node_modules/
+package-lock.json
+.env
+
+#Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+.vscode/
+.idea/
+.DS_Store
+dist/
+coverage/
+.cache/
+.next/
+out/
+.svelte-kit/
+.nuxt/
+build/
+public/build/
+.astro/
+.venv/
+
+#Archivos de sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.swp
+*~
+.project
+.classpath
+
+#Archivos de upload
+uploads/*
+!.gitkeep
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
