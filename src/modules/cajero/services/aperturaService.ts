@@ -1,5 +1,5 @@
-import pool from '../config/database';
-import { VerificarClienteResponse, AperturarCuentaRequest, AperturarCuentaResponse } from '../models/interfaces';
+import pool from '../../../config/database';
+import { VerificarClienteResponse, AperturarCuentaRequest, AperturarCuentaResponse } from '../../../shared/interfaces';
 
 export class AperturaService {
 

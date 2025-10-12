@@ -77,3 +77,67 @@ export interface AperturarCuentaResponse {
   idCuenta?: number;
   idTransaccion?: number;
 }
+
+
+
+
+// ========== INTERFACES PARA RETIRO ==========
+
+export interface BuscarCuentaRequest {
+  numeroCuenta: string;
+}
+
+export interface BuscarCuentaResponse {
+  existe: boolean;
+  mensaje: string;
+  datos?: {
+    numeroCuenta: string;
+    numeroDocumento: string;
+    titular: string;
+    saldo: number;
+    estadoCuenta: string;
+    idCuenta: number;
+    idCliente: number;
+  };
+}
+
+export interface ProcesarRetiroRequest {
+  idCuenta: number;
+  numeroDocumento: string;
+  montoRetirar: number;
+}
+
+export interface ProcesarRetiroResponse {
+  exito: boolean;
+  mensaje: string;
+  datos?: {
+    idTransaccion: number;
+    saldoAnterior: number;
+    saldoNuevo: number;
+    montoRetirado: number;
+    fechaTransaccion: Date;
+  };
+}
+
+
+
+
+// ========== INTERFACES PARA NOTA DÉBITO ==========
+
+export interface AplicarNotaDebitoRequest {
+  idCuenta: number;
+  numeroDocumento: string;
+  valor: number;
+}
+
+export interface AplicarNotaDebitoResponse {
+  exito: boolean;
+  mensaje: string;
+  datos?: {
+    idTransaccion: number;
+    saldoAnterior: number;
+    saldoNuevo: number;
+    valor: number;
+    fechaTransaccion: Date;
+  };
+}
